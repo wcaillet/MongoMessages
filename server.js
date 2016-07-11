@@ -11,7 +11,6 @@ const appAuthentication = require('./config/auth.js')
 const connectToDB = require('./config/db-setup.js').connectToDB
 
 // Import Routers
-let indexRouter = require('./routes/indexRouter.js')
 let authRouter = require('./routes/authRouter.js')
 let apiRouter = require('./routes/apiRouter.js')
 
@@ -36,7 +35,7 @@ app.set('view engine', 'html');
 // =========
 // DATABASE
 // =========
-connectToDB("tiy-starter-kit")
+	connectToDB("tiy-starter-kit")
 
 // =========
 // APPLICATION MIDDLEWARE 
@@ -56,7 +55,6 @@ appAuthentication(User)
 // ROUTERS
 // =========
 
-app.use( '/', indexRouter )
 app.use( '/auth', authRouter )
 app.use( '/api', apiRouter )
 

@@ -1,15 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Backbone from 'backbone'
 
 const app = function() {
 
-	const Header = React.createClass({
-		render: () => {
-			return <h1>YOLO</h1>
-		}
-	})
+	const MsgRouter = Backbone.Router.extend({
+		routes: {
+			"myMessages/all": "showMsgs",
+			"writeMessage": "showMsgEditor",
+			"home": "showHome",
+			"*catchall": "redirect"
+		},
 
-	ReactDOM.render(<Header/>,document.querySelector('.container'))
+		redirect: function() {
+			location.hash = "home"
+		},
+
+		home: function() {
+			
+		}
+
+	})
 }
 
 app()
