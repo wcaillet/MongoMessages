@@ -4,7 +4,7 @@ var HomeView = React.createClass({
 	render: function() {
 		return (
 
-			<div class="homeView">
+			<div className="homeView">
 				<a href='#messages/read'>view inbox</a>
 				<a href='#messages/write'>compose message</a>
 			</div>
