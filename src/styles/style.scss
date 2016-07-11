@@ -8,3 +8,25 @@ h1 {
 	text-align: center;
 	color: fuchsia;
 }
+
+a {
+	text-decoration: none;
+	color: maroon;
+	margin: 5%;
+	background: bisque;
+	padding: 2%;
+}
+
+.inbox {
+	.msg {
+		border: 3px solid maroon;
+		background: bisque;
+		width: 30%;
+		margin: 3% auto;
+		padding: 2%;
+
+		p {
+			margin: 1% 0;
+		}
+	}
+}
